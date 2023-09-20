@@ -1,0 +1,33 @@
+<section class="container-fluid" id="faqs" class="jumptarget">
+    <%if data['values'] and data['values']['title']%>
+        <h2 class="h2-subtitle mt-3"><%= data['values']['title']['value'] %></h2>
+    <%end%>
+
+    <% if data['values'] and data['values']['faqs']%>
+        <div class="py-3 faqs">
+            <div class="accordion" id="faqs">
+                <% data['values']['faqs']['value'].each_with_index do |question, index|%>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading<%=index%>">
+                            <button class="accordion-button btn d-flex align-items-center collapsed px-5"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#q_<%= index %>"
+                                aria-expanded="true"
+                                aria-controls="q_<%= index %>">
+                                <%= question['question'] %>
+                            </button>
+                        </h2>
+
+                        <div id="q_<%= index %>" class="accordion-collapse collapse" aria-labelledby="heading<%=index%>" data-bs-parent="#faqs">
+                            <%if question['answer']%>
+                                <div class="accordion-body">
+                                    <%= question['answer'].html_safe %>
+                                </div>
+                            <%end%>
+                        </div>
+                    </div>
+                <%end%>
+            </div>
+        </div>
+    <%end%>
+</section>

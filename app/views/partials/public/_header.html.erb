@@ -1,0 +1,89 @@
+<% if @header %>
+  <div class="bg-black fixed-top" style="width: 100%; height:82px">
+  <nav class="navbar main-container__only-padding no-padding-sm navbar-expand-md  navbar-scroll bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+
+      <%= image_tag 'menu.svg', alt: 'menu', class: 'navbar-toggler__icon-menu' %>
+    </button>
+
+    <% if @header['instance'] and @header['instance']['menu'] and @header['instance']['menu']['content']['values']['header_logo']%>
+      <%= link_to "/#{@locale}", class: 'navbar-brand' do %>
+        <%= image_tag @header['instance']['menu']['content']['values']['header_logo']['public_path'] || 'logospacebar.svg',
+                      alt: 'Spacebar',
+                      class: 'navbar-brand__logo--margin-left navbar-brand__logo--min-size' %>
+      <% end %>
+    <%end %>
+
+    <div class="collapse navbar-collapse justify-content-right" id="navbarScroll">
+      <ul class="navbar-nav">
+        <li class="nav-item d-flex justify-content-between align-items-center navbar__menu" aria-labelledby="navbarScrollingDropdown">
+          <% if @header['instance'] and @header['instance']['menu'] %>
+
+            <div class="d-flex flex-column flex-md-row">
+              <% @header['instance']['menu']['content']['values']['items']['value'].each do |section| %>
+                <a class="nav-link" aria-current="page" href="<%= section['redirect_url'] %>" style="color: <%= section['text_color'] %>">
+                  <%= section['title'] %>
+                </a>
+              <% end %>
+            </div>
+
+          <% end %>
+
+          <% if @use_multi_language %>
+            <div class="navbar__nav-select">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle flex-nowrap d-flex align-items-center" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                  <svg width="20" height="20" viewBox="0 0 20 20" class="nav-select__icon-world"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 0C4.476 0 0 4.476 0 10s4.476 10 10 10 10-4.476 10-10S15.524 0 10 0zm7.79 6.129h-3.326c-.363-1.79-.972-3.314-1.742-4.4a8.748 8.748 0 0 1 5.068 4.4zM13.548 10c0 .923-.064 1.782-.173 2.58h-6.75A19.058 19.058 0 0 1 6.452 10c0-.923.064-1.782.173-2.58h6.75c.109.798.173 1.657.173 2.58zM10 1.29c1.085 0 2.476 1.779 3.15 4.839h-6.3C7.525 3.069 8.916 1.29 10 1.29zm-2.722.44C6.512 2.81 5.9 4.335 5.536 6.129H2.21a8.748 8.748 0 0 1 5.068-4.4zM1.29 10c0-.9.137-1.766.391-2.58h3.65a19.723 19.723 0 0 0 0 5.161H1.68A8.655 8.655 0 0 1 1.291 10zm.92 3.871h3.326c.363 1.79.972 3.314 1.742 4.4a8.748 8.748 0 0 1-5.068-4.4zM10 18.71c-1.085 0-2.476-1.779-3.15-4.839h6.3c-.674 3.06-2.065 4.839-3.15 4.839zm2.722-.44c.766-1.08 1.379-2.605 1.742-4.399h3.326a8.748 8.748 0 0 1-5.068 4.4zm1.947-5.69a19.723 19.723 0 0 0 0-5.161h3.65c.254.815.39 1.682.39 2.581 0 .9-.136 1.766-.39 2.58h-3.65z"
+                      fill="#FFF" fill-rule="nonzero" />
+                  </svg>
+                  <%= t(:language_title) %>
+                </button>
+
+                <ul class="dropdown-menu">
+                  <% (I18n.available_locales - [@locale.to_sym]).each do |lang| %>
+                    <li>
+                      <%= link_to t('language_title', locale: lang.to_s),
+                                  "/#{lang.to_s}/" + (t("routes.#{controller_name}.#{action_name}", locale: lang.to_s) || '').gsub(':slug', (params[:slug] || '')),
+                                  class: 'dropdown-item'%>
+                    </li>
+                  <% end %>
+                </ul>
+
+              </div>
+            </div>
+          <% end %>
+
+          <div id="header-login"></div>
+
+          <div class="nav-item__social-media nav-item__social-media--d-none">
+            <p class="nav-item__social-media-p text-white">¡Visítanos en nuestras redes sociales!</p>
+            <div class="nav-item__social-media-icons d-flex justify-content-center">
+              <%= link_to 'https://web.facebook.com/myspacebarmx/?_rdc=1&_rdr' do %>
+                <%= image_tag 'footer-icon-facebook.svg', alt: 'Facebook' %>
+              <% end %>
+
+              <%= link_to 'https://www.instagram.com' do %>
+                <%= image_tag 'footer-icon-instagram.svg', alt: 'Instagram' %>
+              <% end %>
+
+              <%= link_to 'https://mx.linkedin.com/company/tremak?trk=public_profile_experience-item_profile-section-card_image-click' do %>
+                <%= image_tag 'footer-icon-linked-in.svg', alt: 'Linked In' %>
+              <% end %>
+
+              <%= link_to 'https://www.youtube.com' do %>
+                <%= image_tag 'footer-icon-you-tube.svg', alt: 'Youtube' %>
+              <% end %>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<% end %>

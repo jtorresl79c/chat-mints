@@ -1,0 +1,65 @@
+steps:
+  # step 1: Pull latest docker image.
+  - name: 'gcr.io/cloud-builders/docker'
+    id: "Pull latest image"
+    entrypoint: 'bash'
+    args: [
+     '-c',
+     'docker pull us-central1-docker.pkg.dev/shared-impl/cloud-run-implementations/$_IMPL_NAME-$_APP_ENV:latest || exit 0'
+    ]
+  # step 2: Build docker image with tags commit hash and latest.
+  - name: gcr.io/cloud-builders/docker
+    id: "Build docker images"
+    args: [
+     'build',
+      '-t',
+      'us-central1-docker.pkg.dev/shared-impl/cloud-run-implementations/$_IMPL_NAME-$_APP_ENV:$SHORT_SHA',
+      '-t',
+      'us-central1-docker.pkg.dev/shared-impl/cloud-run-implementations/$_IMPL_NAME-$_APP_ENV:latest',
+      '.'
+    ]
+  # step 3: Push commit hash image to GCP registry
+  - name: "gcr.io/cloud-builders/docker"
+    id: "Push commit hash image"
+    args: ["push", "us-central1-docker.pkg.dev/shared-impl/cloud-run-implementations/$_IMPL_NAME-$_APP_ENV:$SHORT_SHA"]
+    timeout: 1600s
+
+  # step 4: Push latest image to GCP registry
+  - name: "gcr.io/cloud-builders/docker"
+    id: "Push latest image"
+    args: ["push", "us-central1-docker.pkg.dev/shared-impl/cloud-run-implementations/$_IMPL_NAME-$_APP_ENV:latest"]
+    timeout: 1600s
+
+  # step 5: Create Cloud Run instance
+  - id: "Deploy container image to Cloud Run"
+    name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: bash
+    args:
+    - -c
+    - |
+      export MIN_INSTANCES_NUMBER=$([ $_APP_ENV == "production" ] && echo 1 || echo 0)
+      export REQUEST_TIMEOUT=$([ $_APP_ENV == "production" ] && echo 600 || echo 300)
+      gcloud run deploy $_IMPL_NAME-$_APP_ENV --platform=managed --allow-unauthenticated \
+      --image us-central1-docker.pkg.dev/shared-impl/cloud-run-implementations/$_IMPL_NAME-$_APP_ENV:$SHORT_SHA \
+      --region us-central1 \
+      --timeout $$REQUEST_TIMEOUT \
+      --min-instances $$MIN_INSTANCES_NUMBER \
+      --labels=implementation=$_IMPL_NAME-$_APP_ENV
+    timeout: 1600s
+
+  # step 6: Create permissions for Cloud Run
+  - id: "Set allUsers invocation role for current cloud run service"
+    name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        gcloud run services add-iam-policy-binding "$_IMPL_NAME-$_APP_ENV" \
+        --member="allUsers" \
+        --role="roles/run.invoker" \
+        --region="us-central1"
+    timeout: 1600s
+
+timeout: 3600s
+options:
+  machineType: "N1_HIGHCPU_8"

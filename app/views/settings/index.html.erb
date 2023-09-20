@@ -1,0 +1,5 @@
+<div id="app" class="g-sidenav-show"></div>
+
+<script>
+    let user = <%= "#{(@me || {}).to_json}".html_safe %>
+</script>

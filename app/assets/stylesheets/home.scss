@@ -1,0 +1,134 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.accordion-item {
+    background-color: transparent;
+    border: 0px solid rgba(255, 255, 255, 0);
+}
+
+.accordion-button:not(.collapsed),
+.collapsed {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #001733;
+    color: yellow;
+    margin-top: 10px;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(0deg)
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-90deg)
+}
+
+.accordion-body {
+    font-family: 'Overlock', cursive;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.accordion-button {
+    font-family: 'Overlock', cursive;
+    font-weight: 900;
+    font-size: 1.3em;
+    position: relative;
+    background: #001733;
+    &:hover{
+        color: yellow
+    }
+}
+
+
+.accordion-button::after {
+    position: absolute;
+    left: 15px;
+}
+
+.accordion-item {
+    background-color: #fff;
+    border: 0px solid rgba(0, 0, 0, .125);
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.faqs {
+    margin-bottom: 6rem;
+}
+
+.section-content {
+    align-items: center;
+    display: flex;
+}
+
+.section-content-text {
+    font-size: 50px;
+}
+.section-content-element {
+    flex: 1;
+}
+
+@media (max-width:992px) {
+    .section-content-text {
+      p {
+        strong {
+          font-size: 30px;
+         
+        }
+      }
+    }
+    .section-content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+
+    }
+}
+
+
+.mecanica-div-paso{
+    border: none;
+    max-width: 350px;
+    img {
+        width: 85%;
+        margin: auto;
+    }
+}
+
+.mecanica-description{
+    font-family: 'Overlock', cursive;
+    font-weight: 900;
+    text-align:center;
+    color:black;
+    font-size: 1.3em;
+    line-height: 1.2em;
+    margin-top: 15px;
+    margin-left: 20px;
+    max-width: 80%;
+}
+
+
+
+.center-vertically a{
+    display: flex;
+    align-items: center;
+}
+// OVERWRITEN
+
+.card-body {
+    padding-top: 0px;
+}
+
+.container-fluid {
+    max-width: 1280px;
+}

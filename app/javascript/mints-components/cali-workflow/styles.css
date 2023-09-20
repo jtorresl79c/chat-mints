@@ -1,0 +1,44 @@
+.cali__workflow-card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    border-radius: 1rem;
+}
+
+.cali__workflow-items-container {
+    display: flex;
+    flex: 0 0;
+}
+
+.cali__workflow-item {
+    display: flex;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-right: solid #F4F6F7;
+}
+
+.cali__workflow-progress-bar {
+    background-color: #E9ECEF;
+    height: 9px;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.cali__workflow-progress-bar__filled {
+    background: linear-gradient(90deg, rgba(4,191,136,1) 0%, rgba(43,215,123,1) 50%, rgba(82,240,111,1) 100%);
+    height: 9px;
+    border-radius: 1rem 0 0 0;
+    width: 0;
+}
+
+.cali__workflow-item__img {
+    margin-right: 0.5rem;
+    width: 45px;
+    font-size: 40px;
+    color: #D1D5DD;
+}

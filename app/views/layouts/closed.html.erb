@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%=@meta_tags[:title]%></title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/> <!--Dynamic favicon-->
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="<%=@meta_tags[:description]%>"/>
+  <meta name="keywords" content="<%=@meta_tags[:keywords]%>"/>
+
+  <%= render partial: 'partials/gtm' %>
+
+  <%= render partial: 'partials/metadata' %>
+
+  <%= stylesheet_link_tag 'application.css', nonce: request.content_security_policy_nonce %>
+  <%= stylesheet_link_tag "#{@controller}.css", nonce: request.content_security_policy_nonce %>
+  <%= csp_meta_tag %>
+
+</head>
+
+<body>
+
+  <%= yield %>
+
+</body>
+</html>

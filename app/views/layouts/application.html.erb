@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=@meta_tags[:title]%></title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<%=@meta_tags[:description]%>"/>
+    <meta name="keywords" content="<%=@meta_tags[:keywords]%>"/>
+  
+    <%= render partial: 'partials/public/gtm' %>
+   
+    <%= render partial: 'partials/public/metadata' %>
+
+    <%= vite_client_tag %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'core/bootstrap.min', nonce: request.content_security_policy_nonce %>
+    <%= stylesheet_link_tag 'application.css', nonce: request.content_security_policy_nonce %>
+    <%= stylesheet_link_tag "#{@controller}.css", nonce: request.content_security_policy_nonce %>
+
+    <%= javascript_include_tag 'popper.min.js', nonce: request.content_security_policy_nonce %>
+    <%= javascript_include_tag 'bootstrap.min.js', nonce: request.content_security_policy_nonce %>
+    <%= javascript_include_tag 'image_variations_manager.js', nonce: request.content_security_policy_nonce %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <script>
+      <% if @locale %>
+      let locale = <%= "#{@locale}" ? "#{@locale.to_json}".html_safe : 'es' %>;
+      <% end %>
+
+      <% if @contact %>
+      let contact = <%= "#{@contact}" ? "#{@contact.to_json}".html_safe : null %>;
+      <% end %>
+
+      let forms = [];
+    </script>
+    
+  </head>
+
+  <body style="background-color: #f0f0f0">
+
+    <!-- Header component-->
+    <%= render partial: 'partials/public/header' %>
+
+    <div class="contenedor">
+      <!-- Page component-->
+      <%= yield %>
+
+      <% if @page and @page['config_json'] %>
+
+        <% JSON.parse(@page['config_json']).each do |config| %>
+          <% if config['content'] and config['content']['extra_params'] and config['content']['extra_params']['partial']
+              partial_name = config['content']['extra_params']['partial']
+            else
+              partial_name = config['type']
+            end%>
+
+          <% begin %>
+            <% @page[config['type']].keys.each_with_index do |component_name, index| %>
+              <%=
+                render partial: 'partials/components/' + partial_name,
+                       locals: {
+                         data: @page[config['type']][component_name]['content'],
+                         index: index
+                       }
+              %>
+            <% end %>
+          <% rescue => e;
+               # Ignored
+             end%>
+
+        <% end %>
+
+        <%= vite_javascript_tag "entrypoints/components/dynamic_form", nonce: request.content_security_policy_nonce if (@page['form'] || {}).keys.count > 0 %>
+
+      <% end %>
+    </div>
+
+    <!-- Footer component-->
+    <%= render partial: 'partials/public/footer' %>
+
+    <%@javascript_files.each do |js_file|%>
+      <%= vite_javascript_tag "entrypoints/public/#{js_file}", nonce: request.content_security_policy_nonce  %>
+    <%end%>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=@meta_tags[:title]%></title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<%=@meta_tags[:description]%>"/>
+    <meta name="keywords" content="<%=@meta_tags[:keywords]%>"/>
+  
+    <%= render partial: 'partials/public/metadata' %>
+
+    <%= vite_client_tag %>
+    <%= csp_meta_tag %>
+
+    <%= vite_javascript_tag "entrypoints/settings/#{action_name}", nonce: request.content_security_policy_nonce  %>
+    <%= stylesheet_link_tag "settings/#{action_name}.css", nonce: request.content_security_policy_nonce %>
+
+    <%= javascript_include_tag 'popper.min.js', nonce: request.content_security_policy_nonce %>
+    <%= javascript_include_tag 'bootstrap.min.js', nonce: request.content_security_policy_nonce %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+      <!-- Page component-->
+      <%= yield %>
+  </body>
+</html>

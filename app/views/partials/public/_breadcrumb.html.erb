@@ -1,0 +1,13 @@
+<%if items%>
+    <nav aria-label="breadcrumb" class="">
+        <ol class="breadcrumb pt-4 mx-2 mx-sm-0 px-sm-0 px-2">
+            <%items.each do |item|%>
+                <%if item[:url]%>
+                    <a class="breadcrumb-item active" aria-current="page" href="/<%= item[:url] %>" style="text-decoration:none;"><%=item[:title]%></a>
+                <%else%>
+                    <li class="breadcrumb-item active" aria-current="page"><%=item[:title]%></li>
+                <%end%>
+            <%end%>
+        </ol>
+    </nav>
+<%end%>

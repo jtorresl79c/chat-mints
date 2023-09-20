@@ -1,0 +1,43 @@
+<% if @footer %>
+  <footer>
+
+    <% if @footer['instance'] and @footer['instance']['sitemap'] and @footer['instance']['sitemap']['content']['values']['footer_logo']%>
+      <%= image_tag @footer['instance']['sitemap']['content']['values']['footer_logo']['public_path'],
+                    alt: @footer['instance']['sitemap']['content']['values']['footer_logo']['alt'],
+                    class: 'footer__logo footer__footer-container--direction navbar-brand__logo--min-size'%>
+    <% end %>
+
+    <div class="d-flex flex-wrap" style="margin: 25px 0; row-gap: 15px;">
+
+      <% if @footer['instance'] and @footer['instance']['sitemap'] %>
+        <% @footer['instance']['sitemap']['content']['values']['sections']['value'].each do |section| %>
+          <div class="footer__footer-container footer__footer-container--direction"
+               style="flex-basis: 270px; flex-grow: 1;">
+            <p class="footer-container__p--blue"><%= section['title'] %></p>
+
+            <% section['items'].each do |item| %>
+
+              <% if item['redirect_url'] %>
+                <a class="footer-container__p f-w-300" href="<%= item['redirect_url'] %>"> <%= item['title'] %> </a>
+              <% else %>
+                <p class="footer-container__p f-w-300"> <%= item['title'] %> </p>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+
+<!--      <div class="footer__footer-container footer__footer-container--direction"-->
+<!--           style="flex-basis: 270px; flex-grow: 1;">-->
+<!--        <p class="footer-container__p--blue">Síguenos</p>-->
+<!--        <p class="footer-container__p f-w-300">¡Visítanos en nuestras redes sociales!</p>-->
+<!--        <div class="d-flex" style="column-gap: 20px;">-->
+          <%#= image_tag 'footer-icon-facebook.svg', alt: 'Facebook' %>
+          <%#= image_tag 'footer-icon-instagram.svg', alt: 'Instagram' %>
+          <%#= image_tag 'footer-icon-linked-in.svg', alt: 'Linked In' %>
+          <%#= image_tag 'footer-icon-you-tube.svg', alt: 'Youtube', class: 'icon-youtube-padding-right'%>
+<!--        </div>-->
+<!--      </div>-->
+    </div>
+  </footer>
+<% end %>

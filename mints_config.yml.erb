@@ -1,0 +1,22 @@
+# Mints connection configuration
+mints:
+    host: <%= ENV.fetch('MINTS_HOST', 'http://localhost:8000') %>
+    api_key: <%= ENV.fetch('MINTS_SESSION_TOKEN', nil) %> # Service account api key
+    mints_slug: slug_id # Variable to save if user has been share the cookies in the last expire_time hours
+redis_cache:
+  use_cache: <%= ENV.fetch('USE_REDIS_CACHE', false) %>
+  redis_host: <%= ENV.fetch('REDIS_HOST', 'localhost') %>
+  redis_port: <%= ENV.fetch('REDIS_PORT', 6379) %>
+  redis_db: <%= ENV.fetch('REDIS_DB', 1) %>
+  groups:
+    - urls:
+        - api/v1/content/*
+        - api/v1/config/public-folders/*
+      time: <%= ENV.fetch('REDIS_TIME', 30) %>
+sdk:
+    debug: false
+cookies_iframe:
+  activated: false
+  expire_time: 24 # In hours
+  hosts:
+      - urls

@@ -1,0 +1,194 @@
+.cali__modal-content {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    border: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 0.75rem;
+    outline: 0;
+}
+
+.cali__modal-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1060;
+    background-color: rgba(0, 0, 0, .9);
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.cali__modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+}
+
+.modal.show .modal-dialog {
+    transform: none;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+}
+
+.modal-dialog {
+    transition: transform .3s ease-out;
+    transform: translateY(-50px);
+}
+
+.cali__modal-close-modal {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.cali__modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.75rem - 1px);
+    border-top-right-radius: calc(0.75rem - 1px);
+}
+
+.cali__modal-body {
+    padding-top: 1.5rem;
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.cali__modal-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.375;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #344767;
+}
+
+.cali_modal-btn-close {
+    padding: 0.5rem;
+    margin: -0.5rem -0.5rem -0.5rem auto;
+    color: #344767;
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: 0.25em;
+    color: #fff;
+    border: 0;
+    border-radius: 0.25rem;
+    opacity: .5;
+    text-transform: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.cali__modal-close-modal span {
+    color: #344767;
+}
+
+.cali__modal-footer {
+    text-align: right;
+    padding: 1rem;
+}
+
+.cali__modal-btn-primary {
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: -.025rem;
+    box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
+    background-size: 150%;
+    background-position-x: 25%;
+    text-transform: uppercase;
+    margin: 0.25rem;
+    background-color: #cb0c9f;
+    border-color: #cb0c9f;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    padding: 0.75rem 1.5rem;
+    font-size: .75rem;
+    border-radius: 0.5rem;
+    transition: all .15s ease-in;
+    -webkit-appearance: button;
+}
+
+.cali__modal-btn-secondary {
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: -.025rem;
+    box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
+    background-size: 150%;
+    background-position-x: 25%;
+    text-transform: uppercase;
+    margin: 0.25rem;
+    background-color: #8392ab;
+    border-color: #8392ab;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    padding: 0.75rem 1.5rem;
+    font-size: .75rem;
+    border-radius: 0.5rem;
+    transition: all .15s ease-in;
+    -webkit-appearance: button;
+}
+
+
+/* <!----------------------------Sizes----------------------------!> */
+
+.cali__modal-content.size-sm {
+    max-width: 500px;
+}
+
+.cali__modal-content.size-md {
+    max-width: 800px;
+}
+
+.cali__modal-content.size-lg {
+    max-width: 1200px;
+}
+
+.cali__modal-content.size-xl {
+    max-width: 1600px;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+}

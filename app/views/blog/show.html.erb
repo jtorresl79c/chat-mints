@@ -1,0 +1,12 @@
+<div class="py-3">
+
+    <div class="secondary-padding">
+
+        <%= render partial: 'partials/public/breadcrumb', locals: { items: [] }%>
+        
+        <article class="py-2">
+            <h4 class="story-title"><%= @story['title'] %></h4>
+            <%=@story['body'].html_safe if @story['body']%>
+        </article>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+ <!--Print all social tags from CaliforniaXF or defaults tags-->
+<%@meta_tags[:social_tags].each do |social_tags|%>
+    <%social_tags.each do |key, tags|%>
+        <%tags.keys.each do |tag_key|%>
+            <meta name="<%=key%>:<%=tag_key%>" content="<%=tags[tag_key.to_sym]%>"/>
+        <%end%>
+    <%end%>
+<%end%>

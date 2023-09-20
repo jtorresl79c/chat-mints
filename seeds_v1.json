@@ -1,0 +1,1476 @@
+[{
+    "object_type": "public_folders",
+    "data": {
+        "title": "Spanish",
+        "slug": "content-pages-es",
+        "object_type": "content_pages",
+        "description": "Spanish content"
+    }
+}, {
+    "object_type": "public_folders",
+    "data": {
+        "title": "English",
+        "slug": "content-pages-en",
+        "object_type": "content_pages",
+        "description": "English content"
+    }
+}, {
+    "object_type": "public_folders",
+    "data": {
+        "title": "Home",
+        "slug": "home-es",
+        "object_type": "content_pages",
+        "description": "Home content",
+        "parent_id": "{{public_folders:slug:content-pages-es}}"
+    }
+}, {
+    "object_type": "public_folders",
+    "data": {
+        "title": "Header",
+        "slug": "header-es",
+        "object_type": "content_pages",
+        "description": "Header content",
+        "parent_id": "{{public_folders:slug:content-pages-es}}"
+    }
+}, {
+    "object_type": "public_folders",
+    "data": {
+        "title": "Blog",
+        "slug": "blog-es",
+        "object_type": "content_pages",
+        "description": "Blog content",
+        "parent_id": "{{public_folders:slug:content-pages-es}}"
+    }
+}, {
+    "object_type": "public_folders",
+    "data": {
+        "title": "Terms and conditions",
+        "slug": "terms-and-conditions-es",
+        "object_type": "content_pages",
+        "description": "Terms and conditions content",
+        "parent_id": "{{public_folders:slug:content-pages-es}}"
+    }
+}, {
+    "object_type": "public_folders",
+    "data": {
+        "title": "Home",
+        "slug": "home-en",
+        "object_type": "content_pages",
+        "description": "Home content",
+        "parent_id": "{{public_folders:slug:content-pages-en}}"
+    }
+}, {
+    "object_type": "public_folders",
+    "data": {
+        "title": "Header",
+        "slug": "header-en",
+        "object_type": "content_pages",
+        "description": "Header content",
+        "parent_id": "{{public_folders:slug:content-pages-en}}"
+    }
+}, {
+    "object_type": "public_folders",
+    "data": {
+        "title": "Blog",
+        "slug": "blog-en",
+        "object_type": "content_pages",
+        "description": "Blog content",
+        "parent_id": "{{public_folders:slug:content-pages-en}}"
+    }
+}, {
+    "object_type": "public_folders",
+    "data": {
+        "title": "Terms and conditions",
+        "slug": "terms-and-conditions-en",
+        "object_type": "content_pages",
+        "description": "Terms and conditions content",
+        "parent_id": "{{public_folders:slug:content-pages-en}}"
+    }
+}, {
+    "object_type": "forms",
+    "data": {
+        "title": "Contact form",
+        "slug": "contact-form",
+        "description": "Si tienes alguna duda respecto al evento, ponte en contacto con nosotros y nos comunicaremos lo más pronto posible.",
+        "config_json": {
+            "fields": [
+                {
+                    "help": "¿Cuál es tu nombre completo?",
+                    "slug": "title",
+                    "title": "Title",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_5_7b",
+                    "required": null,
+                    "is_static": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "attributions": [],
+                    "default_value": null,
+                    "data_type_enum": 16,
+                    "multiple_values": null,
+                    "validation_text": null,
+                    "extra_parameters": {
+                        "step": 1
+                    }
+                },
+                {
+                    "help": "*Nombre(s)",
+                    "slug": "given_name",
+                    "regex": null,
+                    "title": "Given name",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_1_50",
+                    "required": true,
+                    "image_help": null,
+                    "max_length": null,
+                    "min_length": null,
+                    "keep_values": null,
+                    "placeholder": "Escribe tu nombre",
+                    "attributions": [],
+                    "default_value": "",
+                    "data_type_enum": 10,
+                    "multiple_values": false,
+                    "validation_text": "Campo requerido.",
+                    "extra_parameters": {
+                        "step": 1,
+                        "styles": "col-12 col-md-6"
+                    }
+                },
+                {
+                    "help": "*Apellidos",
+                    "slug": "last_name",
+                    "regex": null,
+                    "title": "Last name",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_2_et",
+                    "required": true,
+                    "image_help": null,
+                    "max_length": null,
+                    "min_length": null,
+                    "keep_values": null,
+                    "placeholder": "Escribe tus apellidos.",
+                    "attributions": [],
+                    "default_value": "",
+                    "data_type_enum": 10,
+                    "multiple_values": false,
+                    "validation_text": "Campo requerido.",
+                    "extra_parameters": {
+                        "step": 1,
+                        "styles": "col-12 col-md-6"
+                    }
+                },
+                {
+                    "help": "¿Cuál es tu correo electrónico?",
+                    "slug": "title-k",
+                    "title": "Title",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_6_r6",
+                    "required": null,
+                    "is_static": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "attributions": [],
+                    "default_value": null,
+                    "data_type_enum": 16,
+                    "multiple_values": null,
+                    "validation_text": null,
+                    "extra_parameters": {
+                        "step": 2
+                    }
+                },
+                {
+                    "help": "",
+                    "slug": "email",
+                    "regex": null,
+                    "title": "Email",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_3_z4",
+                    "required": true,
+                    "image_help": null,
+                    "max_length": null,
+                    "min_length": null,
+                    "keep_values": null,
+                    "placeholder": "Escribe tu correo electrónico",
+                    "attributions": [],
+                    "default_value": "",
+                    "data_type_enum": 10,
+                    "multiple_values": false,
+                    "validation_text": "Ingresa un correo electrónico válido.",
+                    "extra_parameters": {
+                        "step": 2
+                    }
+                },
+                {
+                    "help": "¿Cuál es tu numero de teléfono?",
+                    "slug": "title-w",
+                    "title": "Title",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_7_cd",
+                    "required": null,
+                    "is_static": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "attributions": [],
+                    "default_value": null,
+                    "data_type_enum": 16,
+                    "multiple_values": null,
+                    "validation_text": null,
+                    "extra_parameters": {
+                        "step": 3
+                    }
+                },
+                {
+                    "help": "Teléfono",
+                    "slug": "phone",
+                    "title": "Phone",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_4_6f",
+                    "required": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "attributions": [],
+                    "default_value": "",
+                    "data_type_enum": 15,
+                    "multiple_values": false,
+                    "validation_text": "Campo requerido.",
+                    "extra_parameters": {
+                        "step": 3
+                    }
+                },
+                {
+                    "help": "¿Cuál es tu mensaje?",
+                    "slug": "title-z",
+                    "title": "Title",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_8_s5",
+                    "required": null,
+                    "is_static": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "attributions": [],
+                    "default_value": null,
+                    "data_type_enum": 16,
+                    "multiple_values": null,
+                    "validation_text": null,
+                    "extra_parameters": {
+                        "step": 4,
+                        "autofilllabel": "¿Cómo podemos ayudarte, {{given_name}}?"
+                    }
+                },
+                {
+                    "help": "*Mensaje",
+                    "slug": "message",
+                    "regex": null,
+                    "title": "Message",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_9_l9",
+                    "required": true,
+                    "image_help": null,
+                    "max_length": null,
+                    "min_length": null,
+                    "keep_values": null,
+                    "placeholder": "Escribe tu mensaje",
+                    "attributions": [],
+                    "default_value": "",
+                    "data_type_enum": 11,
+                    "multiple_values": false,
+                    "validation_text": "Campo requerido.",
+                    "extra_parameters": {
+                        "step": 4
+                    }
+                },
+                {
+                    "help": "Siguiente",
+                    "slug": "button",
+                    "title": "Button",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_10_bg",
+                    "required": null,
+                    "is_static": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "attributions": [],
+                    "default_value": null,
+                    "data_type_enum": 16,
+                    "multiple_values": null,
+                    "validation_text": null,
+                    "extra_parameters": {
+                        "api": "/api/v1/forms/pruebita",
+                        "help_text": "o presiona enter",
+                        "btn_styles": "btn-secondary",
+                        "error_message": {
+                            "icon": "error",
+                            "text": "Ha ocurrido un error, inténtalo mas tarde.",
+                            "title": "Oops..."
+                        },
+                        "success_message": {
+                            "icon": "success",
+                            "text": "¡Responderemos lo mas rápido posible!",
+                            "title": "Gracias por contactarnos"
+                        },
+                        "is_footer_button": true
+                    }
+                }
+            ],
+            "points": null,
+            "audience": "anyone",
+            "form_title": "Contacto",
+            "moderation": null,
+            "publishing": null,
+            "point_system": null,
+            "allow_flagging": null,
+            "scramble_answers": null,
+            "is_progressive_form": true,
+            "multiple_submissions": "store",
+            "overwrite_attributes": false,
+            "audience_relationship": null,
+            "current_field_sequence": 11
+        },
+        "object_type": "contacts",
+        "form_type": "contact_profiling",
+        "available_from": null,
+        "available_to": null
+    },
+    "public_folders": []
+}, {
+    "object_type": "content_templates",
+    "data": {
+        "title": "Available languages",
+        "slug": "available-languages",
+        "description": "ASUR languages.",
+        "config_json": {
+            "fields": [{
+                "help": null,
+                "slug": "languages",
+                "title": "Languages",
+                "hidden": false,
+                "field_id": "field_0",
+                "readonly": false,
+                "required": false,
+                "isSelected": false,
+                "max_length": null,
+                "min_length": null,
+                "placeholder": "",
+                "default_value": "",
+                "data_type_enum": 95,
+                "multiple_values": true,
+                "config_json": {
+                    "fields": [{
+                        "help": null,
+                        "slug": "title",
+                        "title": "Title",
+                        "hidden": false,
+                        "field_id": "field_0",
+                        "readonly": false,
+                        "required": false,
+                        "isSelected": false,
+                        "max_length": null,
+                        "min_length": null,
+                        "placeholder": "",
+                        "default_value": "",
+                        "data_type_enum": 10,
+                        "multiple_values": false
+                    }, {
+                        "help": null,
+                        "slug": "slug",
+                        "title": "Slug",
+                        "hidden": false,
+                        "field_id": "field_1",
+                        "readonly": false,
+                        "required": false,
+                        "isSelected": false,
+                        "max_length": null,
+                        "min_length": null,
+                        "placeholder": "",
+                        "default_value": "",
+                        "data_type_enum": 10,
+                        "multiple_values": false
+                    }],
+                    "current_field_sequence": 2
+                }
+            }],
+            "current_field_sequence": 1
+        }
+    }
+}, {
+    "object_type": "content_templates",
+    "data": {
+        "title": "Header menu",
+        "slug": "header-menu",
+        "description": "Header menu.",
+        "config_json": {
+            "fields": [{
+                "help": null,
+                "slug": "items",
+                "title": "Menu items",
+                "hidden": false,
+                "field_id": "field_0",
+                "readonly": false,
+                "required": false,
+                "isSelected": false,
+                "max_length": null,
+                "min_length": null,
+                "placeholder": "",
+                "default_value": "",
+                "data_type_enum": 95,
+                "multiple_values": true,
+                "config_json": {
+                    "fields": [{
+                        "help": null,
+                        "slug": "title",
+                        "title": "Title",
+                        "hidden": false,
+                        "field_id": "field_0",
+                        "readonly": false,
+                        "required": false,
+                        "isSelected": false,
+                        "max_length": null,
+                        "min_length": null,
+                        "placeholder": "",
+                        "default_value": "",
+                        "data_type_enum": 10,
+                        "multiple_values": false
+                    }, {
+                        "help": null,
+                        "slug": "redirect_url",
+                        "title": "Redirect url",
+                        "hidden": false,
+                        "field_id": "field_1",
+                        "readonly": false,
+                        "required": false,
+                        "isSelected": false,
+                        "max_length": null,
+                        "min_length": null,
+                        "placeholder": "",
+                        "default_value": "",
+                        "data_type_enum": 10,
+                        "multiple_values": false
+                    }, {
+                        "help": null,
+                        "slug": "text_color",
+                        "title": "Text color",
+                        "hidden": false,
+                        "field_id": "field_2",
+                        "readonly": false,
+                        "required": false,
+                        "isSelected": false,
+                        "max_length": null,
+                        "min_length": null,
+                        "placeholder": "",
+                        "default_value": "",
+                        "data_type_enum": 10,
+                        "multiple_values": false
+                    }, {
+                        "help": null,
+                        "slug": "submenu",
+                        "title": "Submenu items",
+                        "hidden": false,
+                        "field_id": "field_3",
+                        "readonly": false,
+                        "required": false,
+                        "isSelected": false,
+                        "max_length": null,
+                        "min_length": null,
+                        "placeholder": "",
+                        "default_value": "",
+                        "data_type_enum": 95,
+                        "multiple_values": true,
+                        "config_json": {
+                            "fields": [{
+                                "help": null,
+                                "slug": "title",
+                                "title": "Title",
+                                "hidden": false,
+                                "field_id": "field_0",
+                                "readonly": false,
+                                "required": false,
+                                "isSelected": false,
+                                "max_length": null,
+                                "min_length": null,
+                                "placeholder": "",
+                                "default_value": "",
+                                "data_type_enum": 10,
+                                "multiple_values": false
+                            }, {
+                                "help": null,
+                                "slug": "redirect_url",
+                                "title": "Redirect url",
+                                "hidden": false,
+                                "field_id": "field_1",
+                                "readonly": false,
+                                "required": false,
+                                "isSelected": false,
+                                "max_length": null,
+                                "min_length": null,
+                                "placeholder": "",
+                                "default_value": "",
+                                "data_type_enum": 10,
+                                "multiple_values": false
+                            }, {
+                                "help": null,
+                                "slug": "text_color",
+                                "title": "Text color",
+                                "hidden": false,
+                                "field_id": "field_2",
+                                "readonly": false,
+                                "required": false,
+                                "isSelected": false,
+                                "max_length": null,
+                                "min_length": null,
+                                "placeholder": "",
+                                "default_value": "",
+                                "data_type_enum": 10,
+                                "multiple_values": false
+                            }],
+                            "current_field_sequence": 3
+                        }
+                    }],
+                    "current_field_sequence": 4
+                }
+            },{
+                "help": null,
+                "slug": "header_logo",
+                "title": "Header logo",
+                "hidden": false,
+                "field_id": "field_1",
+                "readonly": false,
+                "required": false,
+                "isSelected": false,
+                "max_length": null,
+                "min_length": null,
+                "placeholder": "",
+                "default_value": "",
+                "data_type_enum": 51,
+                "multiple_values": false
+            }],
+            "current_field_sequence": 2
+        }
+    }
+}, {
+    "object_type": "content_templates",
+    "data": {
+        "title": "Sitemap",
+        "slug": "sitemap",
+        "description": "Footer sitemap.",
+        "config_json": {
+            "fields": [{
+                "help": null,
+                "slug": "sections",
+                "title": "Sections",
+                "hidden": false,
+                "field_id": "field_0",
+                "readonly": false,
+                "required": false,
+                "isSelected": false,
+                "max_length": null,
+                "min_length": null,
+                "placeholder": "",
+                "default_value": "",
+                "data_type_enum": 95,
+                "multiple_values": true,
+                "config_json": {
+                    "fields": [{
+                        "help": null,
+                        "slug": "title",
+                        "title": "Title",
+                        "hidden": false,
+                        "field_id": "field_0",
+                        "readonly": false,
+                        "required": false,
+                        "isSelected": false,
+                        "max_length": null,
+                        "min_length": null,
+                        "placeholder": "",
+                        "default_value": "",
+                        "data_type_enum": 13,
+                        "multiple_values": false
+                    }, {
+                        "help": null,
+                        "slug": "items",
+                        "title": "Items",
+                        "hidden": false,
+                        "field_id": "field_1",
+                        "readonly": false,
+                        "required": false,
+                        "isSelected": false,
+                        "max_length": null,
+                        "min_length": null,
+                        "placeholder": "",
+                        "default_value": "",
+                        "data_type_enum": 95,
+                        "multiple_values": true,
+                        "config_json": {
+                            "fields": [{
+                                "help": null,
+                                "slug": "title",
+                                "title": "Title",
+                                "hidden": false,
+                                "field_id": "field_0",
+                                "readonly": false,
+                                "required": false,
+                                "isSelected": false,
+                                "max_length": null,
+                                "min_length": null,
+                                "placeholder": "",
+                                "default_value": "",
+                                "data_type_enum": 10,
+                                "multiple_values": false
+                            }, {
+                                "help": null,
+                                "slug": "redirect_url",
+                                "title": "Redirect url",
+                                "hidden": false,
+                                "field_id": "field_1",
+                                "readonly": false,
+                                "required": false,
+                                "isSelected": false,
+                                "max_length": null,
+                                "min_length": null,
+                                "placeholder": "",
+                                "default_value": "",
+                                "data_type_enum": 10,
+                                "multiple_values": false
+                            }],
+                            "current_field_sequence": 2
+                        }
+                    }],
+                    "current_field_sequence": 2
+                }
+            },{
+                "help": null,
+                "slug": "items",
+                "title": "Footer logo",
+                "hidden": false,
+                "field_id": "field_1",
+                "readonly": false,
+                "required": false,
+                "isSelected": false,
+                "max_length": null,
+                "min_length": null,
+                "placeholder": "",
+                "default_value": "",
+                "data_type_enum": 51,
+                "multiple_values": true
+            }],
+            "current_field_sequence": 2
+        }
+    }
+}, {
+    "object_type": "content_templates",
+    "data": {
+        "title": "Faqs",
+        "slug": "faqs",
+        "description": "Faqs.",
+        "config_json": {
+            "fields": [{
+                "help": null,
+                "slug": "questions_and_answers",
+                "title": "Questions and answers",
+                "hidden": false,
+                "field_id": "field_0",
+                "readonly": false,
+                "required": false,
+                "isSelected": false,
+                "max_length": null,
+                "min_length": null,
+                "placeholder": "",
+                "default_value": "",
+                "data_type_enum": 95,
+                "multiple_values": true,
+                "config_json": {
+                    "fields": [{
+                        "help": null,
+                        "slug": "question",
+                        "title": "Question",
+                        "hidden": false,
+                        "field_id": "field_0",
+                        "readonly": false,
+                        "required": false,
+                        "isSelected": false,
+                        "max_length": null,
+                        "min_length": null,
+                        "placeholder": "",
+                        "default_value": "",
+                        "data_type_enum": 10,
+                        "multiple_values": false
+                    }, {
+                        "help": null,
+                        "slug": "answer",
+                        "title": "Answer",
+                        "hidden": false,
+                        "field_id": "field_1",
+                        "readonly": false,
+                        "required": false,
+                        "isSelected": false,
+                        "max_length": null,
+                        "min_length": null,
+                        "placeholder": "",
+                        "default_value": "",
+                        "data_type_enum": 13,
+                        "multiple_values": false
+                    }],
+                    "current_field_sequence": 2
+                }
+            }],
+            "current_field_sequence": 1
+        }
+    }
+}, {
+    "object_type": "forms",
+    "data": {
+        "title": "Leader request form",
+        "slug": "leader-request-form",
+        "description": "This form only helps to print all the html in the page.",
+        "config_json": {
+            "fields": [
+                {
+                    "help": "Registra tus datos y tus concesionarias. Los cargos tuyos y de tus invitados se cobrarán directo a cada concesionaria, agrega los RFC de todas tus concesionarias a las que quieras invitar. ",
+                    "slug": "description",
+                    "title": "Description",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_4_z7",
+                    "required": null,
+                    "is_static": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "attributions": [],
+                    "default_value": null,
+                    "data_type_enum": 16,
+                    "multiple_values": null,
+                    "validation_text": null,
+                    "extra_parameters": []
+                },
+                {
+                    "help": "*Nombre(s)",
+                    "slug": "given_name",
+                    "regex": null,
+                    "title": "Given name",
+                    "value": null,
+                    "hidden": null,
+                    "source": "contact-field",
+                    "field_id": "field_5_hw",
+                    "required": true,
+                    "image_help": null,
+                    "max_length": null,
+                    "min_length": null,
+                    "keep_values": null,
+                    "placeholder": "",
+                    "attributions": [],
+                    "default_value": "",
+                    "data_type_enum": 10,
+                    "multiple_values": false,
+                    "validation_text": "Campo requerido.",
+                    "extra_parameters": {
+                        "styles": "col-12 col-md-6"
+                    }
+                },
+                {
+                    "help": "*Apellidos",
+                    "slug": "last_name",
+                    "regex": null,
+                    "title": "Last name",
+                    "value": null,
+                    "hidden": null,
+                    "source": "contact-field",
+                    "field_id": "field_6_wy",
+                    "required": true,
+                    "image_help": null,
+                    "max_length": null,
+                    "min_length": null,
+                    "keep_values": null,
+                    "placeholder": "",
+                    "attributions": [],
+                    "default_value": "",
+                    "data_type_enum": 10,
+                    "multiple_values": false,
+                    "validation_text": "Campo requerido.",
+                    "extra_parameters": {
+                        "styles": "col-12 col-md-6"
+                    }
+                },
+                {
+                    "help": "*Correo electrónico",
+                    "slug": "email",
+                    "regex": null,
+                    "title": "Email",
+                    "value": null,
+                    "hidden": null,
+                    "source": "contact-field",
+                    "field_id": "field_13_gr",
+                    "required": false,
+                    "image_help": null,
+                    "max_length": null,
+                    "min_length": null,
+                    "keep_values": null,
+                    "placeholder": "",
+                    "attributions": [],
+                    "default_value": "",
+                    "data_type_enum": 10,
+                    "multiple_values": false,
+                    "validation_text": "Campo requerido.",
+                    "extra_parameters": {
+                        "styles": "col-12"
+                    }
+                },
+                {
+                    "help": "*Número de teléfono",
+                    "slug": "phone",
+                    "title": "Phone",
+                    "value": null,
+                    "hidden": null,
+                    "source": "contact-field",
+                    "field_id": "field_7_9v",
+                    "required": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "attributions": [],
+                    "default_value": null,
+                    "data_type_enum": 15,
+                    "multiple_values": false,
+                    "validation_text": "Campo requerido.",
+                    "extra_parameters": {
+                        "styles": "col-12"
+                    }
+                },
+                {
+                    "help": "*RFC asociado a tu concesión",
+                    "slug": "rfc",
+                    "title": "rfc",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "options": "",
+                    "field_id": "field_10_gc",
+                    "required": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "placeholder": null,
+                    "attributions": [],
+                    "list_options": [],
+                    "default_value": "",
+                    "data_type_enum": 40,
+                    "multiple_values": true,
+                    "validation_text": "Campo requerido.",
+                    "extra_parameters": {
+                        "api": "/api/v1/rfcs",
+                        "styles": "col-12",
+                        "add_btn_text": "+ Agregar RFC de concesionaria",
+                        "show_related_rfcs": false
+                    }
+                },
+                {
+                    "help": "Acepto los Términos y condiciones y Políticas de privacidad",
+                    "slug": "terms-and-conditions",
+                    "title": "terms and conditions",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_12_hr",
+                    "required": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "attributions": [],
+                    "default_value": null,
+                    "data_type_enum": 21,
+                    "multiple_values": false,
+                    "validation_text": "Debes aceptar los términos y condiciones",
+                    "extra_parameters": []
+                },
+                {
+                    "help": "Continuar",
+                    "slug": "submit",
+                    "title": "Submit",
+                    "value": null,
+                    "hidden": null,
+                    "source": "free-value",
+                    "field_id": "field_11_zx",
+                    "required": null,
+                    "is_static": true,
+                    "image_help": null,
+                    "keep_values": null,
+                    "attributions": [],
+                    "default_value": null,
+                    "data_type_enum": 16,
+                    "multiple_values": null,
+                    "validation_text": null,
+                    "extra_parameters": {
+                        "api": "/api/v1/leader/register",
+                        "styles": "col-12 col-md-6",
+                        "is_button": true,
+                        "button_styles": "btn btn-dark",
+                        "is_footer_button": true
+                    }
+                }
+            ],
+            "points": null,
+            "audience": "anyone",
+            "form_title": "Crea tu perfil",
+            "moderation": null,
+            "publishing": null,
+            "point_system": null,
+            "allow_flagging": null,
+            "action_on_submit": "message",
+            "scramble_answers": null,
+            "message_on_submit": "",
+            "is_progressive_form": false,
+            "multiple_submissions": "forbid",
+            "overwrite_attributes": false,
+            "audience_relationship": null,
+            "current_field_sequence": 14
+        },
+        "object_type": "contacts",
+        "form_type": "contact_profiling",
+        "available_from": null,
+        "available_to": null
+    },
+    "public_folders": []
+}, {
+    "object_type": "story_templates",
+    "data": {
+        "title": "Blog",
+        "slug": "blog",
+        "description": "Blog",
+        "config_json": {
+            "attributes": []
+        }
+    }
+}, {
+    "object_type": "content_instances",
+    "data": {
+        "title": "Languages en",
+        "slug": "languages-en",
+        "content_template_id": "{{content_templates:slug:available-languages}}",
+        "config_json": {
+            "field_0": [{
+                    "slug": "en",
+                    "title": "English"
+                },
+                {
+                    "slug": "es",
+                    "title": "Spanish"
+                }
+            ]
+        }
+    }
+}, {
+    "object_type": "content_instances",
+    "data": {
+        "title": "Languages es",
+        "slug": "languages-es",
+        "content_template_id": "{{content_templates:slug:available-languages}}",
+        "config_json": {
+            "field_0": [{
+                    "slug": "es",
+                    "title": "Español"
+                },
+                {
+                    "slug": "en",
+                    "title": "Ingles"
+                }
+            ]
+        }
+    }
+}, {
+    "object_type": "content_instances",
+    "data": {
+        "content_template_id": "{{content_templates:slug:header-menu}}",
+        "title": "Menu ES",
+        "slug": "menu-es",
+        "config_json": {
+            "field_0": [{
+                    "title": "Blog",
+                    "submenu": [],
+                    "text_color": "white",
+                    "redirect_url": "/blog"
+                },
+                {
+                    "title": "Comunidad",
+                    "submenu": [],
+                    "text_color": "white",
+                    "redirect_url": ""
+                },
+                {
+                    "title": "Contacto",
+                    "submenu": [],
+                    "text_color": "white",
+                    "redirect_url": "/contacto"
+                }
+            ]
+        }
+    }
+}, {
+    "object_type": "content_instances",
+    "data": {
+        "content_template_id": "{{content_templates:slug:header-menu}}",
+        "title": "Menu EN",
+        "slug": "menu-en",
+        "config_json": {
+            "field_0": [{
+                    "title": "Blog",
+                    "submenu": [],
+                    "text_color": "white",
+                    "redirect_url": "/blog"
+                },
+                {
+                    "title": "Community",
+                    "submenu": [],
+                    "text_color": "white",
+                    "redirect_url": ""
+                },
+                {
+                    "title": "Contact",
+                    "submenu": [],
+                    "text_color": "white",
+                    "redirect_url": "/contact"
+                }
+            ]
+        }
+    }
+}, {
+    "object_type": "content_pages",
+    "data": {
+        "title": "Header en",
+        "slug": "header-en",
+        "parent_id": null,
+        "stage_id": null,
+        "description": "Header en",
+        "config_json": [{"name": "Languages", "type": "instance", "content": {"id": "{{content_instances:slug:languages-en}}", "title": "Languages en", "fields": null, "features": null, "templateId": 2, "extra_params": null, "relationships": [], "templateTitle": null}, "sectionId": "languages", "conditions": []}, {"name": "Menu", "type": "instance", "content": {"id": "{{content_instances:slug:menu-en}}", "title": "Menu EN", "fields": null, "features": null, "templateId": 7, "extra_params": null, "relationships": [], "templateTitle": null}, "sectionId": "menu", "conditions": []}],
+        "attributions_json": "{\"tags\": [], \"attributes\": []}"
+    },
+    "public_folders": [
+        "content-pages-en",
+        "header-en",
+        "home-en",
+        "blog-en",
+        "terms-and-conditions-en"
+    ]
+}, {
+    "object_type": "content_pages",
+    "data": {
+        "title": "Header es",
+        "slug": "header-es",
+        "parent_id": null,
+        "stage_id": null,
+        "description": "Header es",
+        "config_json": [{"name": "Languages", "type": "instance", "content": {"id": "{{content_instances:slug:languages-es}}", "title": "Languages es", "fields": null, "features": null, "templateId": 2, "extra_params": null, "relationships": [], "templateTitle": null}, "sectionId": "languages", "conditions": []}, {"name": "Menu", "type": "instance", "content": {"id": "{{content_instances:slug:menu-es}}", "title": "Menu ES", "fields": null, "features": null, "templateId": 7, "extra_params": null, "relationships": [], "templateTitle": null}, "sectionId": "menu", "conditions": []}],
+        "attributions_json": "{\"tags\": [], \"attributes\": []}"
+    },
+    "public_folders": [
+        "content-pages-es",
+        "header-es",
+        "home-es",
+        "blog-es",
+        "terms-and-conditions-es"
+    ]
+}, {
+    "object_type": "content_pages",
+    "data": {
+        "title": "Home page es",
+        "slug": "home-page-es",
+        "parent_id": null,
+        "stage_id": null,
+        "description": "Home page es",
+        "config_json": [{"name": "Form", "type": "form", "content": {"id": "{{forms:slug:contact-form}}", "title": "Register Form ES", "fields": null, "features": null, "extra_params": null, "relationships": []}, "sectionId": "form", "conditions": []}],
+        "attributions_json": "{\"tags\": [], \"attributes\": []}"
+    },
+    "public_folders": [
+        "content-pages-es",
+        "home-es"
+    ]
+}, {
+    "object_type": "content_pages",
+    "data": {
+        "title": "Home page en",
+        "slug": "home-page-en",
+        "parent_id": null,
+        "stage_id": null,
+        "description": "Home page en",
+        "config_json": [{"name": "Form", "type": "form", "content": {"id": "{{forms:slug:leader-request-form}}", "title": "Register Form EN", "fields": null, "features": null, "extra_params": null, "relationships": []}, "sectionId": "form", "conditions": []}],
+        "attributions_json": "{\"tags\": [], \"attributes\": []}"
+    },
+    "public_folders": [
+        "content-pages-en",
+        "home-en"
+    ]
+}, {
+    "object_type": "content_instances",
+    "data": {
+        "content_template_id": "{{content_templates:slug:sitemap}}",
+        "title": "Sitemap ES",
+        "slug": "sitemap-es",
+        "config_json": {
+            "field_0": [{
+                    "items": [{
+                            "title": "Shop",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Eat",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Drink",
+                            "redirect_url": "/"
+                        }
+                    ],
+                    "title": "Tiendas y restaurantes"
+                },
+                {
+                    "items": [{
+                            "title": "Estatus de vuelos",
+                            "redirect_url": "/vuelos"
+                        },
+                        {
+                            "title": "Aerolíneas ",
+                            "redirect_url": "/vuelos"
+                        }
+                    ],
+                    "title": "Vuelos"
+                },
+                {
+                    "items": [{
+                            "title": "Terminales",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Medidas del COVID",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Transportación",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Clima",
+                            "redirect_url": "/"
+                        }
+                    ],
+                    "title": "Guía del aeropuerto"
+                },
+                {
+                    "items": [{
+                            "title": "Tours",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Parques",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Cenotes",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Beach Club",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Playas",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Ruinas",
+                            "redirect_url": "/"
+                        }
+                    ],
+                    "title": "Descrubre"
+                },
+                {
+                    "items": [{
+                            "title": "Formulario",
+                            "redirect_url": "/contacto"
+                        },
+                        {
+                            "title": "FAQS",
+                            "redirect_url": "/faqs"
+                        }
+                    ],
+                    "title": "Contacto"
+                }
+            ]
+        }
+    }
+}, {
+    "object_type": "content_instances",
+    "data": {
+        "content_template_id": "{{content_templates:slug:sitemap}}",
+        "title": "Sitemap EN",
+        "slug": "sitemap-en",
+        "config_json": {
+            "field_0": [{
+                    "items": [{
+                            "title": "Shop",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Eat",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Drink",
+                            "redirect_url": "/"
+                        }
+                    ],
+                    "title": "Stores & restaurants"
+                },
+                {
+                    "items": [{
+                            "title": "stories status",
+                            "redirect_url": "/stories"
+                        },
+                        {
+                            "title": "Airlines ",
+                            "redirect_url": "/stories"
+                        }
+                    ],
+                    "title": "stories"
+                },
+                {
+                    "items": [{
+                            "title": "Terminals",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "COVID measures",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Transportation",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Weather",
+                            "redirect_url": "/"
+                        }
+                    ],
+                    "title": "Airport guide"
+                },
+                {
+                    "items": [{
+                            "title": "Tours",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Parks",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Cenotes",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Beach Club",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Beaches",
+                            "redirect_url": "/"
+                        },
+                        {
+                            "title": "Ruins",
+                            "redirect_url": "/"
+                        }
+                    ],
+                    "title": "Discover"
+                },
+                {
+                    "items": [{
+                            "title": "Form",
+                            "redirect_url": "/contact"
+                        },
+                        {
+                            "title": "FAQS",
+                            "redirect_url": "/faqs"
+                        }
+                    ],
+                    "title": "Contact"
+                }
+            ]
+        }
+    }
+}, {
+    "object_type": "content_pages",
+    "data": {
+        "title": "Footer en",
+        "slug": "footer-en",
+        "parent_id": null,
+        "stage_id": null,
+        "description": "Footer en",
+        "config_json": [{"name": "Sitemap", "type": "instance", "content": {"id": "{{content_instances:slug:sitemap-en}}", "title": "Sitemap EN", "fields": null, "features": null, "templateId": 5, "extra_params": null, "relationships": [], "templateTitle": null}, "sectionId": "sitemap", "conditions": []}],
+        "attributions_json": "{\"tags\": [], \"attributes\": []}"
+    },
+    "public_folders": [
+        "content-pages-en",
+        "footer-en",
+        "home-en",
+        "blog-en",
+        "terms-and-conditions-en"
+    ]
+}, {
+    "object_type": "content_pages",
+    "data": {
+        "title": "Footer es",
+        "slug": "footer-es",
+        "parent_id": null,
+        "stage_id": null,
+        "description": "Footer es",
+        "config_json": [{"name": "Sitemap", "type": "instance", "content": {"id": "{{content_instances:slug:sitemap-es}}", "title": "Sitemap ES", "fields": null, "features": null, "templateId": 5, "extra_params": null, "relationships": [], "templateTitle": null}, "sectionId": "sitemap", "conditions": []}],
+        "attributions_json": "{\"tags\": [], \"attributes\": []}"
+    },
+    "public_folders": [
+        "content-pages-es",
+        "footer-es",
+        "home-es",
+        "blog-es",
+        "terms-and-conditions-es"
+    ]
+}, {
+    "object_type": "content_instances",
+    "data": {
+        "content_template_id": "{{content_templates:slug:faqs}}",
+        "title": "Faqs EN",
+        "slug": "faqs-en",
+        "config_json": {
+            "field_0": [{
+                    "answer": "<p>Integer non eros commodo, mollis eros quis, ornare purus. Morbi eget velit quam. Donec et libero id turpis rutrum tincidunt quis eu tellus. Etiam vehicula, quam sed luctus consequat, turpis ante consectetur ipsum, vitae semper eros diam in dui. Nam ex massa, euismod id accumsan et, fermentum sit amet erat. Donec non purus non dolor viverra dapibus. Proin mauris felis, pellentesque et rutrum sit amet, condimentum ac felis. Ut augue urna, vehicula quis consectetur sit amet, placerat vel lacus. Mauris lacinia justo a elit tempor, quis rutrum urna iaculis. Etiam eu dui massa. Aenean sed aliquam mauris. Ut in sem justo. Cras sodales, lectus nec viverra fringilla, elit nisi lacinia ligula, eget vulputate lorem erat at justo.</p>",
+                    "question": "Question 1"
+                },
+                {
+                    "answer": "<p>Integer non eros commodo, mollis eros quis, ornare purus. Morbi eget velit quam. Donec et libero id turpis rutrum tincidunt quis eu tellus. Etiam vehicula, quam sed luctus consequat, turpis ante consectetur ipsum, vitae semper eros diam in dui. Nam ex massa, euismod id accumsan et, fermentum sit amet erat. Donec non purus non dolor viverra dapibus. Proin mauris felis, pellentesque et rutrum sit amet, condimentum ac felis. Ut augue urna, vehicula quis consectetur sit amet, placerat vel lacus. Mauris lacinia justo a elit tempor, quis rutrum urna iaculis. Etiam eu dui massa. Aenean sed aliquam mauris. Ut in sem justo. Cras sodales, lectus nec viverra fringilla, elit nisi lacinia ligula, eget <strong>vulputate lorem</strong> erat at justo.</p>\n<p>Integer non eros commodo, mollis eros quis, ornare purus. Morbi eget velit quam. Donec et libero id turpis rutrum tincidunt quis eu tellus. Etiam vehicula, quam sed luctus consequat, turpis ante consectetur ipsum, vitae semper eros diam in dui. Nam ex massa, euismod id accumsan et, fermentum sit amet erat. Donec non purus non dolor viverra dapibus. Proin mauris felis, pellentesque et rutrum sit amet, condimentum ac felis. Ut augue urna, vehicula quis consectetur sit amet, placerat vel lacus. Mauris lacinia justo a elit tempor, quis rutrum urna iaculis. Etiam eu dui massa. Aenean sed aliquam mauris. Ut in sem justo. Cras sodales, lectus nec viverra fringilla, elit nisi lacinia ligula, eget vulputate lorem erat at justo.</p>\n<ol>\n<li>Integer non eros commodo, mollis eros quis, ornare purus. Morbi eget velit quam. Donec et libero id turpis rutrum tincidunt quis eu tellus. Etiam vehicula, quam sed luctus consequat, turpis ante consectetur ipsum.</li>\n<li>Vitae semper eros diam in dui. Nam ex massa, euismod id accumsan et, fermentum sit amet erat. Donec non purus non dolor viverra dapibus.</li>\n</ol>",
+                    "question": "Question 2"
+                }
+            ]
+        }
+    }
+}, {
+    "object_type": "content_instances",
+    "data": {
+        "content_template_id": "{{content_templates:slug:faqs}}",
+        "title": "Faqs ES",
+        "slug": "faqs-es",
+        "config_json": {
+            "field_0": [{
+                    "answer": "<p>Integer non eros commodo, mollis eros quis, ornare purus. Morbi eget velit quam. Donec et libero id turpis rutrum tincidunt quis eu tellus. Etiam vehicula, quam sed luctus consequat, turpis ante consectetur ipsum, vitae semper eros diam in dui. Nam ex massa, euismod id accumsan et, fermentum sit amet erat. Donec non purus non dolor viverra dapibus. Proin mauris felis, pellentesque et rutrum sit amet, condimentum ac felis. Ut augue urna, vehicula quis consectetur sit amet, placerat vel lacus. Mauris lacinia justo a elit tempor, quis rutrum urna iaculis. Etiam eu dui massa. Aenean sed aliquam mauris. Ut in sem justo. Cras sodales, lectus nec viverra fringilla, elit nisi lacinia ligula, eget vulputate lorem erat at justo.</p>",
+                    "question": "Pregunta 1"
+                },
+                {
+                    "answer": "<p>Integer non eros commodo, mollis eros quis, ornare purus. Morbi eget velit quam. Donec et libero id turpis rutrum tincidunt quis eu tellus. Etiam vehicula, quam sed luctus consequat, turpis ante consectetur ipsum, vitae semper eros diam in dui. Nam ex massa, euismod id accumsan et, fermentum sit amet erat. Donec non purus non dolor viverra dapibus. Proin mauris felis, pellentesque et rutrum sit amet, condimentum ac felis. Ut augue urna, vehicula quis consectetur sit amet, placerat vel lacus. Mauris lacinia justo a elit tempor, quis rutrum urna iaculis. Etiam eu dui massa. Aenean sed aliquam mauris. Ut in sem justo. Cras sodales, lectus nec viverra fringilla, elit nisi lacinia ligula, eget <strong>vulputate lorem</strong> erat at justo.</p>\n<p>Integer non eros commodo, mollis eros quis, ornare purus. Morbi eget velit quam. Donec et libero id turpis rutrum tincidunt quis eu tellus. Etiam vehicula, quam sed luctus consequat, turpis ante consectetur ipsum, vitae semper eros diam in dui. Nam ex massa, euismod id accumsan et, fermentum sit amet erat. Donec non purus non dolor viverra dapibus. Proin mauris felis, pellentesque et rutrum sit amet, condimentum ac felis. Ut augue urna, vehicula quis consectetur sit amet, placerat vel lacus. Mauris lacinia justo a elit tempor, quis rutrum urna iaculis. Etiam eu dui massa. Aenean sed aliquam mauris. Ut in sem justo. Cras sodales, lectus nec viverra fringilla, elit nisi lacinia ligula, eget vulputate lorem erat at justo.</p>\n<ol>\n<li>Integer non eros commodo, mollis eros quis, ornare purus. Morbi eget velit quam. Donec et libero id turpis rutrum tincidunt quis eu tellus. Etiam vehicula, quam sed luctus consequat, turpis ante consectetur ipsum.</li>\n<li>Vitae semper eros diam in dui. Nam ex massa, euismod id accumsan et, fermentum sit amet erat. Donec non purus non dolor viverra dapibus.</li>\n</ol>",
+                    "question": "Pregunta 2"
+                },
+                {
+                    "answer": "<p>Integer non eros commodo, mollis eros quis, ornare purus. Morbi eget velit quam. Donec et libero id turpis rutrum tincidunt quis eu tellus. Etiam vehicula, quam sed luctus consequat, turpis ante consectetur ipsum, vitae semper eros diam in dui. Nam ex massa, euismod id accumsan et, fermentum sit amet erat. Donec non purus non dolor viverra dapibus. Proin mauris felis, pellentesque et rutrum sit amet, condimentum ac felis. Ut augue urna, vehicula quis consectetur sit amet, placerat vel lacus. Mauris lacinia justo a elit tempor, quis rutrum urna iaculis. Etiam eu dui massa. Aenean sed aliquam mauris. Ut in sem justo. Cras sodales, lectus nec viverra fringilla, elit nisi lacinia ligula, eget vulputate lorem erat at justo.</p>",
+                    "question": "Pregunta 3"
+                }
+            ]
+        }
+    }
+}, {
+    "object_type": "stories",
+    "data": {
+        "slug": "movies",
+        "story_template_id": "{{story_templates:slug:blog}}",
+        "user_id": 1
+    },
+    "taxonomies": [],
+    "public_folders": [
+        "action"
+    ]
+}, {
+    "object_type": "story_versions",
+    "data": {
+        "title": "Do you understand the next wave of AI innovation? Here’s what you need to know.",
+        "slug": "do-you-understand-the-next-wave-of-ai-innovation-heres-what-you-need-to-know",
+        "blurb": "<p><span style=\"color: rgb(41, 41, 41);\">While these technologies are here to stay, there’s so much exciting innovation around the corner. And this is why you need to prepare yourself and/or your organization for the next wave. Whether you’re a product manager, algorithm engineer or researcher; a leader in finance, marketing, sales or HR, it’s important to understand what new developments to expect in the next 2–5 years. Early-adopting companies that harness this coming wave smartly will be able to enjoy a significant advantage over their competitors.</span></p>",
+        "body": "<h1 id=\"8c0b\" class=\"tb tc rx bn td te tf tg ga th ti tj ge kv tk kw gi kz tl la gm ld tm le gq tn fu\" data-selectable-paragraph=\"\"><strong class=\"ba\">What do you think of when you hear &ldquo;Artificial Intelligence&rdquo;?</strong></h1>\n<p id=\"b29d\" class=\"pw-post-body-paragraph to tp rx lh b tq tr fy ts tt tu gc tv tw tx ty tz ua ub uc ud ue uf ug uh ui kh fu\" data-selectable-paragraph=\"\">AI is now part of our daily lives. Ideas that used to belong to science fiction or advanced academic research are real. Facial recognition technology helps us cross international borders and unlock our phones. Our favorite online stores point us in the direction of products we may want or need that we didn&rsquo;t even know existed. And autocorrect saves us time when typing and prevents spelling mistakes (although left unchecked it can cause some embarrassing moments &mdash; just Google &ldquo;autocorrect fails&rdquo;).</p>\n<p id=\"2ed2\" class=\"pw-post-body-paragraph to tp rx lh b tq uj fy ts tt uk gc tv tw ul ty tz ua um uc ud ue un ug uh ui kh fu\" data-selectable-paragraph=\"\">We&rsquo;re constantly hearing about the latest advances made possible by technologies such as computer vision, machine learning, natural language processing&hellip;the list is long, there are many use cases and several success stories. We&rsquo;re already using all these technologies on a daily basis. Whisper it quietly, but some are now so readily available that they&rsquo;re almost becoming a commodity.</p>",
+        "social_metadata": {
+            "twitter": {
+                "title": "Movies",
+                "description": "A field similar to blurb, but twitter has a 200 character restriction"
+            },
+            "open_graph": {
+                "type": "article",
+                "title": "Movies",
+                "description": "this description should be similar to the blurb"
+            }
+        },
+        "attributions_json": {
+            "tags": [],
+            "attributes": []
+        },
+        "story_id": "{{stories:slug:movies}}",
+        "content_version_id": "{{content_versions:id:1}}"
+    }
+}, {
+    "object_type": "story_versions",
+    "data": {
+        "title": "Do you understand the next wave of AI innovation? Here’s what you need to know.",
+        "slug": "do-you-understand-the-next-wave-of-ai-innovation-heres-what-you-need-to-know",
+        "blurb": "<p><span style=\"color: rgb(41, 41, 41);\">While these technologies are here to stay, there’s so much exciting innovation around the corner. And this is why you need to prepare yourself and/or your organization for the next wave. Whether you’re a product manager, algorithm engineer or researcher; a leader in finance, marketing, sales or HR, it’s important to understand what new developments to expect in the next 2–5 years. Early-adopting companies that harness this coming wave smartly will be able to enjoy a significant advantage over their competitors.</span></p>",
+        "body": "<h1 id=\"8c0b\" class=\"tb tc rx bn td te tf tg ga th ti tj ge kv tk kw gi kz tl la gm ld tm le gq tn fu\" data-selectable-paragraph=\"\"><strong class=\"ba\">What do you think of when you hear &ldquo;Artificial Intelligence&rdquo;?</strong></h1>\n<p id=\"b29d\" class=\"pw-post-body-paragraph to tp rx lh b tq tr fy ts tt tu gc tv tw tx ty tz ua ub uc ud ue uf ug uh ui kh fu\" data-selectable-paragraph=\"\">AI is now part of our daily lives. Ideas that used to belong to science fiction or advanced academic research are real. Facial recognition technology helps us cross international borders and unlock our phones. Our favorite online stores point us in the direction of products we may want or need that we didn&rsquo;t even know existed. And autocorrect saves us time when typing and prevents spelling mistakes (although left unchecked it can cause some embarrassing moments &mdash; just Google &ldquo;autocorrect fails&rdquo;).</p>\n<p id=\"2ed2\" class=\"pw-post-body-paragraph to tp rx lh b tq uj fy ts tt uk gc tv tw ul ty tz ua um uc ud ue un ug uh ui kh fu\" data-selectable-paragraph=\"\">We&rsquo;re constantly hearing about the latest advances made possible by technologies such as computer vision, machine learning, natural language processing&hellip;the list is long, there are many use cases and several success stories. We&rsquo;re already using all these technologies on a daily basis. Whisper it quietly, but some are now so readily available that they&rsquo;re almost becoming a commodity.</p>",
+        "social_metadata": {
+            "twitter": {
+                "title": "Movies",
+                "description": "A field similar to blurb, but twitter has a 200 character restriction"
+            },
+            "open_graph": {
+                "type": "article",
+                "title": "Movies",
+                "description": "this description should be similar to the blurb"
+            }
+        },
+        "attributions_json": {
+            "tags": [],
+            "attributes": []
+        },
+        "story_id": "{{stories:slug:movies}}",
+        "content_version_id": "{{content_versions:id:2}}"
+    },
+    "attributes": []
+}, {
+    "object_type": "story_versions",
+    "data": {
+        "title": "¿Entiendes la próxima ola de innovación en IA? Esto es lo que necesita saber.",
+        "slug": "entiendes-la-proxima-ola-de-innovacion-en-ia-esto-es-lo-que-necesita-saber",
+        "blurb": "<p><span style=\"color: rgb(41, 41, 41);\">While these technologies are here to stay, there’s so much exciting innovation around the corner. And this is why you need to prepare yourself and/or your organization for the next wave. Whether you’re a product manager, algorithm engineer or researcher; a leader in finance, marketing, sales or HR, it’s important to understand what new developments to expect in the next 2–5 years. Early-adopting companies that harness this coming wave smartly will be able to enjoy a significant advantage over their competitors.</span></p>",
+        "body": "<h1 id=\"8c0b\" class=\"tb tc rx bn td te tf tg ga th ti tj ge kv tk kw gi kz tl la gm ld tm le gq tn fu\" data-selectable-paragraph=\"\"><strong class=\"ba\">What do you think of when you hear &ldquo;Artificial Intelligence&rdquo;?</strong></h1>\n<p id=\"b29d\" class=\"pw-post-body-paragraph to tp rx lh b tq tr fy ts tt tu gc tv tw tx ty tz ua ub uc ud ue uf ug uh ui kh fu\" data-selectable-paragraph=\"\">AI is now part of our daily lives. Ideas that used to belong to science fiction or advanced academic research are real. Facial recognition technology helps us cross international borders and unlock our phones. Our favorite online stores point us in the direction of products we may want or need that we didn&rsquo;t even know existed. And autocorrect saves us time when typing and prevents spelling mistakes (although left unchecked it can cause some embarrassing moments &mdash; just Google &ldquo;autocorrect fails&rdquo;).</p>\n<p id=\"2ed2\" class=\"pw-post-body-paragraph to tp rx lh b tq uj fy ts tt uk gc tv tw ul ty tz ua um uc ud ue un ug uh ui kh fu\" data-selectable-paragraph=\"\">We&rsquo;re constantly hearing about the latest advances made possible by technologies such as computer vision, machine learning, natural language processing&hellip;the list is long, there are many use cases and several success stories. We&rsquo;re already using all these technologies on a daily basis. Whisper it quietly, but some are now so readily available that they&rsquo;re almost becoming a commodity.</p>",
+        "social_metadata": {
+            "twitter": {
+                "title": "Movies",
+                "description": "A field similar to blurb, but twitter has a 200 character restriction"
+            },
+            "open_graph": {
+                "type": "article",
+                "title": "Movies",
+                "description": "this description should be similar to the blurb"
+            }
+        },
+        "attributions_json": {
+            "tags": [],
+            "attributes": []
+        },
+        "story_id": "{{stories:slug:movies}}",
+        "content_version_id": "{{content_versions:id:5}}"
+    }
+}]
